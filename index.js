@@ -79,7 +79,7 @@ const drivers = ['Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'Bobby']
 //     return newArray;
 // }
 
-//Try 8: Returns an empty array.
+//Try 8: Does Everything.
 function findMatching(arrayName, aName){
     let newName = aName.toLowerCase();
     let newArray = [];
@@ -93,3 +93,15 @@ function findMatching(arrayName, aName){
     }
     return newArray;
 }
+// 2nd Function = Passes all tests
+function fuzzyMatch(arrayName, aLetter){
+    // let indexingWord = [aLetter];
+    let newArray = [];
+    for(const item of arrayName){
+        if(item[0] === aLetter[0]){
+            newArray.push(item);
+        }
+    }
+    return newArray;
+}
+// 3rd Function
