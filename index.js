@@ -95,7 +95,6 @@ function findMatching(arrayName, aName){
 }
 // 2nd Function = Passes all tests
 function fuzzyMatch(arrayName, aLetter){
-    // let indexingWord = [aLetter];
     let newArray = [];
     for(const item of arrayName){
         if(item[0] === aLetter[0]){
@@ -104,4 +103,35 @@ function fuzzyMatch(arrayName, aLetter){
     }
     return newArray;
 }
-// 3rd Function
+// 3rd Function: Try 1: Returns empty array
+// function matchName(drivers, aName){
+//     let newArray = [];
+//     for(const item of drivers){
+//         if(item === aName){
+//             newArray.push("Name: ", aName, "Hometown: ", hometown)
+//         }
+//     }
+//     return newArray;
+// };
+
+//Try 2: returns correct array (with TC help changing small things)
+// function matchName(arrayName, aName){
+//     let newArray =[];
+//     for(const item of arrayName){
+//         console.log(item)
+//         if(item.name === aName){
+//             newArray.push(item);
+//         }
+//     }
+//     return newArray;
+// }
+
+//Try 3: Using the filter method: Also gives the same result...
+function matchName(arrayName, aName){
+    let newArray = [];
+    arrayName.filter(function(item){
+        if(item.name === aName)
+            newArray.push(item);
+    })
+    return newArray;
+}
